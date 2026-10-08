@@ -87,6 +87,20 @@
 
     </section>
 
+     <section>
+        <div class="chart-description">
+            <h2>Section 3: A chart on Canadian home prices pulled from FRED</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                This is a chart of the Canadian home price index (normalized to 2010=100), from FRED (Federal Reserve Economic Data).
+            </p>
+        </div>
+
+        <!-- This element will contain our vega-lite chart -->
+         <!-- Note the definition of a second ID in this new section -->
+        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+    </section>
+
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location2"... -->
@@ -105,6 +119,9 @@
         // SEMINAR 1: Added this second chart in section 2
         let figure_2_spec = "wk1_chart2.json"; // We're storing the URL of the graph we want to display in a variable
         vegaEmbed('#Location2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+
+        let figure_3_spec = "wk1_chart2.json"; // We're storing the URL of the graph we want to display in a variable
+        vegaEmbed('#Location3', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 
         // Do you want to add more graphs?
         // try defining a new variable for figure_2_spec, adding VegaEmbed for Location2, and adding a new section in the HTML
