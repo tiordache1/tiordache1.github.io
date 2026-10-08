@@ -1,0 +1,17 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/tiordache1/tiordache1.github.io/refs/heads/main/QCAR628BIS.csv"},
+  
+    "title": {"text": "Real Residential Property Prices for Canada 1970-2026"},
+
+    "width":600,
+    "height":300,
+
+    "mark":{"type": "line","color":"red"},
+ 
+    "encoding": {
+      "x": {"field": "date","type": "temporal"},
+      "y": {"field": "CAN_home_price_index","type": "quantitative"}
+    }
+}
