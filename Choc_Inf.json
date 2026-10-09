@@ -1,0 +1,17 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/tiordache1/tiordache1.github.io/refs/heads/main/Chocolate.csv"},
+  
+    "title": {"text": "CPIH INDEX 01.1.8.3 Chocolate 2015=100"},
+
+    "width":600,
+    "height":300,
+
+    "mark":{"type": "line","color":"green"},
+ 
+    "encoding": {
+      "x": {"field": "Date","type": "temporal"},
+      "y": {"field": "Value","type": "quantitative"}
+    }
+}
