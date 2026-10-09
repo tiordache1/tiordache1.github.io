@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Population",
+    "text": "Nuclear Power",
     "anchor": "start",
-    "subtitle": "Thousands | Source: STATCAN through ECO API",
+    "subtitle": "Output, GWh, | IEA via ECO-API",
     "fontSize": "14",
     "subtitleFontSize": "12",
     "color": "#000000",
@@ -21,7 +21,7 @@
     "strokeOpacity": 0
   },
   "data": {
-    "url": "https://api.economicsobservatory.com/can/popu?vega",
+    "url": "https://api.economicsobservatory.com/can/nGwh?vega",
     "format": {
       "type": "json"
     }
