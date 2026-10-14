@@ -114,6 +114,25 @@
 
     </section>
 
+    <section>
+        <div class="chart-description">
+            <h2>CC3: Old Age Security (OAS) Payments in Canada </h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Old Age Security payments are the largest single item in Canada's budget. Many argue they should be reduced, and that the money should go elsewhere.
+            </p>
+        </div>
+
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                The below charts call into question whether these payments are needed. OAS has been increasing, yet seniors are the wealthiest demographic in the country.
+            </p>
+
+        <!-- This element will contain our vega-lite chart -->
+         <!-- Note the definition of a second ID in this new section -->
+        <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location6"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+    </section>
+
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location2"... -->
@@ -137,6 +156,12 @@
         
         let figure_4_spec = "Can_Nuke_TI_CC2.json"; // We're storing the URL of the graph we want to display in a variable
         vegaEmbed('#Location4', figure_4_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+
+        let figure_5_spec = "NetOASPaymentsChart.json"; // We're storing the URL of the graph we want to display in a variable
+        vegaEmbed('#Location5', figure_5_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+
+        let figure_6_spec = "NetOASPaymentsChart.json"; // We're storing the URL of the graph we want to display in a variable
+        vegaEmbed('#Location5', figure_6_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
 
     </script>
 
