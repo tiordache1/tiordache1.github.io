@@ -65,3 +65,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+/* Display OAS charts side by side */
+#chartGrid {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#chartGrid figure {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+#chartGrid figure .vega-embed {
+  width: 100%;
+}
