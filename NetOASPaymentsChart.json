@@ -1,0 +1,49 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/tiordache1/tiordache1.github.io/refs/heads/main/NetOASPayments.csv"
+  },
+  "title": {
+    "text": "Net OAS Payments (Canada, 1980-2025)"
+  },
+  "width": 600,
+  "height": 300,
+  "mark": {
+    "type": "line",
+    "color": "black"
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "format": "%Y",
+        "tickCount": {
+          "interval": "year",
+          "step": 5
+        },
+        "labelAngle": 0,
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "Net OAS Payments",
+      "type": "quantitative",
+      "axis": {
+        "title": "Net OAS Payments (Nominal Canadian Dollars)",
+        "titlePadding": 20,
+        "titleFontWeight": "normal",
+        "labelExpr": "format(datum.value / 1000000000, '.0f') + 'B'",
+        "grid": true
+      }
+    }
+  },
+  "config": {
+    "axis": {
+      "domainColor": "black",
+      "tickColor": "black"
+    }
+  }
+}
