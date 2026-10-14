@@ -1,0 +1,142 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Median Net Worth, Senior Families vs. Non-Senior Families",
+    "subtitle": ["Canada, 1999 - 2023"],
+    "subtitleFont": "Arial",
+    "subtitleFontSize": 16,
+    "subtitleFontStyle": "normal",
+    "subtitleFontWeight": "normal",
+    "subtitleColor": "#555555",
+    "font": "Arial",
+    "fontSize": 16,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#555555"
+  },
+
+  "width": 600,
+  "height": 330,
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/tiordache1/tiordache1.github.io/refs/heads/main/SeniorvsNon_MedianNetWorth.csv"
+  },
+
+  "transform": [
+    {
+      "fold": [
+        "Senior Families",
+        "Non-Senior Families"
+      ],
+      "as": ["Family Type", "Median Net Worth"]
+    }
+  ],
+
+  "mark": {
+    "type": "line",
+    "smooth": false,
+    "strokeWidth": 2.5,
+    "opacity": 1,
+    "point": {
+      "filled": true,
+      "size": 45
+    }
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "format": "%Y",
+        "tickCount": 6,
+        "labelAngle": 0,
+        "labelFontSize": 10,
+        "grid": false,
+        "domainColor": "#D9D9D9",
+        "tickColor": "#D9D9D9"
+      }
+    },
+
+    "y": {
+      "field": "Median Net Worth",
+      "type": "quantitative",
+      "title": "Median Net Worth (2023 Dollars)",
+      "scale": {
+        "zero": true
+      },
+      "axis": {
+        "format": "$,.0f",
+        "labelFontSize": 10,
+        "titleFontWeight": "normal",
+        "titlePadding": 12,
+        "grid": true,
+        "gridColor": "#D9D9D9",
+        "gridWidth": 1,
+        "domain": false,
+        "tickColor": "transparent"
+      }
+    },
+
+    "color": {
+      "field": "Family Type",
+      "type": "nominal",
+      "title": null,
+      "scale": {
+        "domain": [
+          "Senior Families",
+          "Non-Senior Families"
+        ],
+        "range": [
+          "#176A8A",
+          "#F36B32"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "labelFontSize": 10,
+        "symbolType": "stroke",
+        "symbolStrokeWidth": 3,
+        "symbolSize": 150,
+        "offset": 10,
+        "layout": {
+          "anchor": "middle"
+        }
+      }
+    },
+
+    "order": {
+      "field": "Year",
+      "type": "temporal"
+    },
+
+    "detail": {
+      "field": "Family Type"
+    }
+  },
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#555555",
+      "titleColor": "#555555",
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    },
+    "legend": {
+      "labelColor": "#555555",
+      "labelFont": "Arial",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "layout": {
+        "anchor": "middle"
+      }
+    }
+  }
+}

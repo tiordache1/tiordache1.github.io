@@ -5,8 +5,16 @@
     "url": "https://raw.githubusercontent.com/tiordache1/tiordache1.github.io/refs/heads/main/NetOASPayments.csv"
   },
   "title": {
-    "text": "Net OAS Payments (Canada, 1980-2025)"
-  },
+  "text": "Net OAS Payments",
+  "subtitle": "Canada, 1980 - 2025",
+  "font": "Arial",
+  "fontSize": 16,
+  "fontWeight": "normal",
+  "subtitleFont": "Arial",
+  "subtitleFontSize": 16,
+  "subtitleFontWeight": "normal",
+  "subtitleFontStyle": "normal"
+},
   "width": 600,
   "height": 300,
   "mark": {
