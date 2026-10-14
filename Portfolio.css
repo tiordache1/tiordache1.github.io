@@ -70,13 +70,14 @@ img {
 /* Display OAS charts side by side */
 #chartGrid {
   display: flex;
-  gap: 400px;
+  gap: 500px;
+  justify-content: center;
   align-items: flex-start;
   width: 100%;
 }
 
 #chartGrid figure {
-  flex: 1;
+  flex: 0 0 auto;
   min-width: 0;
   margin: 0;
 }
