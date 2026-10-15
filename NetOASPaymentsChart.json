@@ -15,7 +15,7 @@
   "subtitleFontWeight": "normal",
   "subtitleFontStyle": "normal"
 },
-  "width": 600,
+  "width": 400,
   "height": 300,
   "mark": {
     "type": "line",
