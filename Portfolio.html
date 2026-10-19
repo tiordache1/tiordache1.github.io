@@ -137,6 +137,30 @@
 
     </section>
 
+        <section>
+        <div class="chart-description">
+            <h2>CC4: Re-creating and Improving Another Chart </h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Week 4's portfolio task involved taking a bad chart from elsewhere and updating/fixing it. The below image shows a pie chart from a CBC (Canada Broadcasting Corporation) news show, displaying the results of an opinion poll. Note how the 39% looks smaller than the 33%.
+            </p>
+        </div>
+             <figure id="Location7"></figure>
+
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                See the original chart replicated below at left, and my new chart at right. I adjusted the data to accurately reflect the results, and changed the colours to be more intuitively indicative of people's feelings.
+            </p>
+
+        <!-- This element will contain our vega-lite chart -->
+        <!-- Note the definition of a second ID in this new section -->
+        <div id="chartGrid">
+            <figure id="Location8"></figure>
+            <figure id="Location9"></figure>
+        </div>
+
+
+
+    </section>
+
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location2"... -->
@@ -166,6 +190,15 @@
 
         let figure_6_spec = "SeniorvsNon_MedianNetWorth.json"; // We're storing the URL of the graph we want to display in a variable
         vegaEmbed('#Location6', figure_6_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+
+        let figure_7_spec = "SeniorvsNon_MedianNetWorth.json"; // We're storing the URL of the graph we want to display in a variable
+        vegaEmbed('#Location7', figure_7_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+
+        let figure_8_spec = "BadPieChart.json"; // We're storing the URL of the graph we want to display in a variable
+        vegaEmbed('#Location6', figure_8_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+
+        let figure_9_spec = "CC4_Example.png"; // We're storing the URL of the graph we want to display in a variable
+        vegaEmbed('#Location6', figure_9_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
 
     </script>
 
