@@ -39,6 +39,11 @@ h2 {
   font-size: 1.25em;
 }
 
+/* Forcing bold to actually work properly */
+strong {
+    font-weight: bold;
+}
+
 /* Paragraph */
 p {
   margin-bottom: 1em;
