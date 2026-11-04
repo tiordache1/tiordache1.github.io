@@ -1,39 +1,17 @@
-<!DOCTYPE html>
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
 
 <html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
+
 
 <head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
 
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping to example3.css or another, and take a look at each example.css to see if you understand it-->
     <link rel="stylesheet" type="text/css" href="Portfolio.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+    <title>My Portfolio</title> 
 
-    <!-- This is a link to the vega-lite packages which we're using to make graphs -->
     <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
 
     <style>
-        /* CSS styles can be defined here, or in a separate CSS file */
         #chartGrid {
             display: flex;
         }
@@ -42,94 +20,83 @@
 </head>
 
 <body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
+
+    <h1 class="big" style="margin-bottom: 0px;"> 
+
         Theo Iordache
     </h1>
     <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
+
         Theo Iordache | <a href="https://www.linkedin.com/in/theo-iordache-425997179/">LinkedIn</a> | <a
             href="https://www.github.com/tiordache1/tiordache1.github.io">GitHub</a>
     </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+    <h3 class="small"> 
         This page acts as my portfolio. I add to it week by week, and it will be evaulted in one shot at the end of the term. This can be considered a sort of "mirror" of my main website.  
     </h3>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
+    <!-- For CC1 (portfolio) -->
     <section>
         <div class="chart-description">
             <h2>CC1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 This is a chart I've lifted from https://rdeconomist.github.io/library.
             </p>
         </div>
-
-        <!-- This element will contain our vega-lite chart -->
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location1"></figure> 
 
     </section>
-
-    <!-- SEMINAR 1: copy/pasted above section into a second one to host a second chart -->
+    
     <section>
         <div class="chart-description">
             <h2>CC1: A second basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 Another chart lifted from https://rdeconomist.github.io/library.
             </p>
         </div>
-
-        <!-- This element will contain our vega-lite chart -->
-         <!-- Note the definition of a second ID in this new section -->
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location2"></figure>
 
     </section>
 
-    <!-- For CC2 (portfolio) -- created two charts fron Economics Observatory Data Hub, making sections for them here -->
+    <!-- For CC2 (portfolio) -- created two charts from Economics Observatory Data Hub, making sections for them here -->
     <section>
         <div class="chart-description">
             <h2>CC2: A chart created using the Economics Observatory Data Hub</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 This is a chart of the Canadian inflation rate, created using the Economics Observatory Data Hub.
             </p>
         </div>
 
-        <!-- This element will contain our vega-lite chart -->
-         <!-- Note the definition of a second ID in this new section -->
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location3"></figure> 
 
     </section>
 
     <section>
         <div class="chart-description">
             <h2>CC2: A second chart created using the Economics Observatory Data Hub</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 This is a chart of Canadian nuclear power output, also created using the Economics Observatory Data Hub.
             </p>
         </div>
 
-        <!-- This element will contain our vega-lite chart -->
-         <!-- Note the definition of a second ID in this new section -->
-        <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location4"></figure>
 
     </section>
-
+    
+    <!-- For CC3 (portfolio) -- created two charts on OAS in Canada -->
     <section>
         <div class="chart-description">
             <h2>CC3: Old Age Security (OAS) Payments in Canada </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p>
                 Old Age Security payments are the largest single item in Canada's budget. Many argue they should be reduced, and that the money should go elsewhere.
             </p>
         </div>
 
-        <!-- This element will contain our vega-lite chart -->
-        <!-- Note the definition of a second ID in this new section -->
         <div id="chartGrid">
             <figure id="Location5"></figure>
             <figure id="Location6"></figure>
         </div>
 
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 The above charts call into question whether these payments are needed. OAS has been increasing, yet seniors are significantly wealthier than non-seniors.
 
                 (Data is sourced from Statistics Canada and open.canada.ca)
@@ -137,6 +104,7 @@
 
     </section>
 
+        <!-- For CC4 (portfolio) -- fixing a bad pie chart -->
         <section>
     <div class="chart-description">
         <h2>CC4: Re-creating and Improving Another Chart</h2>
@@ -153,56 +121,82 @@
          alt="Original CBC pie chart"
          style="max-width: 100%; height: auto;">
 
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 See the original chart replicated below at left, and my new chart at right. I adjusted the data to accurately reflect the results, and changed the colours to be more intuitively indicative of people's feelings.
             </p>
 
-        <!-- This element will contain our vega-lite chart -->
-        <!-- Note the definition of a second ID in this new section -->
         <div id="chartGrid">
             <figure id="Location8"></figure>
             <figure id="Location9"></figure>
         </div>
-
-
-
+            
     </section>
 
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location2"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+    <!-- For CC5 (portfolio) -- adding a chart that uses a live link to an API -->
+        <section>
+        <div class="chart-description">
+            <h2>CC5 Task 1: Accessing Data via an API </h2>
+        </div>
+
+        <figure id="Location10"></figure>
+            
+        </div>
+
+            <p> 
+               Base URL: https://api.worldbank.org/v2/
+            </p>
+
+            <p> 
+                Selected Countries: country/kor;jpn;chn/
+            </p>
+
+            <p> 
+                Indicator for Infant Mortaility Rate: indicator/SP.DYN.IMRT.IN
+            </p>
+
+            <p> 
+                Other Elements Needed to Call Data: &per_page=1000&mrnev=1000
+            </p>
+
+            <p> 
+                Returned Data Format: ?format=json
+            </p>    
+
+            <p> 
+                Final URL: https://api.worldbank.org/v2/country/kor;jpn;chn/indicator/SP.DYN.IMRT.IN?format=json&per_page=1000&mrnev=1000
+            </p> 
+            
+    </section>
 
 
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
 
-        let figure_1_spec = "chartLine0.json"; // We're storing the URL of the graph we want to display in a variable
-        // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+        let figure_1_spec = "chartLine0.json"; 
+        vegaEmbed('#Location1', figure_1_spec)
         
-        // SEMINAR 1: Added this second chart in section 2
-        let figure_2_spec = "chartLine1.json"; // We're storing the URL of the graph we want to display in a variable
-        vegaEmbed('#Location2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_2
+        let figure_2_spec = "chartLine1.json"; 
+        vegaEmbed('#Location2', figure_2_spec) 
 
-        let figure_3_spec = "Can_Inf_TI_CC2.json"; // We're storing the URL of the graph we want to display in a variable
-        vegaEmbed('#Location3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_3
+        let figure_3_spec = "Can_Inf_TI_CC2.json"; 
+        vegaEmbed('#Location3', figure_3_spec)
         
-        let figure_4_spec = "Can_Nuke_TI_CC2.json"; // We're storing the URL of the graph we want to display in a variable
-        vegaEmbed('#Location4', figure_4_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+        let figure_4_spec = "Can_Nuke_TI_CC2.json";
+        vegaEmbed('#Location4', figure_4_spec)
 
-        let figure_5_spec = "NetOASPaymentsChart.json"; // We're storing the URL of the graph we want to display in a variable
-        vegaEmbed('#Location5', figure_5_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+        let figure_5_spec = "NetOASPaymentsChart.json";
+        vegaEmbed('#Location5', figure_5_spec)
 
-        let figure_6_spec = "SeniorvsNon_MedianNetWorth.json"; // We're storing the URL of the graph we want to display in a variable
-        vegaEmbed('#Location6', figure_6_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+        let figure_6_spec = "SeniorvsNon_MedianNetWorth.json";
+        vegaEmbed('#Location6', figure_6_spec)
 
-        let figure_8_spec = "BadPieChart.json"; // We're storing the URL of the graph we want to display in a variable
-        vegaEmbed('#Location8', figure_8_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+        let figure_8_spec = "BadPieChart.json"; 
+        vegaEmbed('#Location8', figure_8_spec) 
 
-        let figure_9_spec = "GoodPieChart.json"; // We're storing the URL of the graph we want to display in a variable
-        vegaEmbed('#Location9', figure_9_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_4
+        let figure_9_spec = "GoodPieChart.json"; 
+        vegaEmbed('#Location9', figure_9_spec)
+
+        let figure_10_spec = "CC5_1_Chart.json"; 
+        vegaEmbed('#Location10', figure_10_spec) 
 
     </script>
 
