@@ -11,10 +11,6 @@
   },
   "height": "250",
   "width": "container",
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
   "background": "#ffffff",
   "view": {
     "fill": "#ffffff",
