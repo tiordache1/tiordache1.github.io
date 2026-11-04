@@ -40,10 +40,10 @@ h2 {
 }
 
 /* Forcing bold to actually work properly */
-strong {
-    font-weight: bold;
+p strong {
+  font-weight: 700 !important;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 /* Paragraph */
 p {
   margin-bottom: 1em;
@@ -89,4 +89,28 @@ img {
 
 #chartGrid figure .vega-embed {
   width: 100%;
+}
+
+/* TRYING TO FIX WEIRD NEW SPACING ISSUES */
+/* Reset default browser spacing around all figures */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove extra spacing around the CC2 chart containers */
+#Location3,
+#Location4 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+/* Reset spacing inside the embedded charts */
+#Location3 .vega-embed,
+#Location4 .vega-embed {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
