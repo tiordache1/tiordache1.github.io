@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "New Entrants to Homeless Shelters",
+    "subtitle": "Toronto, 2018-2022",
+    "fontSize": 18,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 13,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/tiordache1/tiordache1.github.io/refs/heads/main/ShelterFlowData.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "substring(datum.Year, 0, 4)",
+      "as": "YearOnly"
+    }
+  ],
+
+  "height": 300,
+  "width": 600,
+
+  "view": {
+    "stroke": null
+  },
+
+  "encoding": {
+    "x": {
+      "field": "YearOnly",
+      "type": "nominal",
+      "scale": {
+        "paddingInner": 0.5,
+        "paddingOuter": 0.25
+      },
+      "axis": {
+        "title": null,
+        "grid": false,
+        "ticks": false,
+        "labelAngle": 0
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#063c7ab9",
+        "stroke": null
+      },
+      "encoding": {
+        "y": {
+          "field": "Newly Homeless",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 20000]
+          },
+          "axis": {
+            "title": "",
+            "grid": false,
+            "tickCount": 5
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "black"
+      },
+      "encoding": {
+        "y": {
+          "field": "Newly Homeless",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Newly Homeless",
+          "type": "quantitative",
+          "format": ",.0f"
+        }
+      }
+    }
+  ]
+}
